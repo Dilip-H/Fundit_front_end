@@ -31,7 +31,7 @@ function Nav() {
                 src={logo} alt="logo"
                 />
                 <div className="nav__right">
-                <Link to="/login">
+                <Link to="/profile">
                 <button className="btn__sign">SIGN IN</button>
                 </Link>    
                 </div>

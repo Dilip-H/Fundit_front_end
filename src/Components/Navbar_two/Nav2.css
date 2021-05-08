@@ -1,0 +1,28 @@
+.nav2 {
+  font-family: "Ubuntu";
+  position: fixed;
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.navbar__black {
+  background-color: rgb(255, 255, 255);
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  padding-left: 50px;
+  cursor: pointer;
+}

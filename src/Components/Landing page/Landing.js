@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Landing.css";
+import { Link } from "react-router-dom";
 import Banner1 from "../../assets/banner1.png";
 import Banner2 from "../../assets/banner2.png";
 import Banner3 from "../../assets/banner3.png";
@@ -18,6 +19,7 @@ function Landing() {
         <br></br>
         <br></br>
 
+        <Link to="/profile">
         <button
                     className="button"
                     type="submit"
@@ -26,6 +28,7 @@ function Landing() {
                     >
                         GET STARTED
         </button>
+        </Link>
         
         </div>
         <div className="bgimage_1" style={{ backgroundImage: Banner2 }}></div>
@@ -43,6 +46,7 @@ function Landing() {
         <br></br>
         <br></br>
 
+        <Link to="/profile">
         <button
                     className="button"
                     type="submit"
@@ -51,6 +55,7 @@ function Landing() {
                     >
                         GET STARTED
         </button>
+        </Link>
         </div>
 
         <br></br>
