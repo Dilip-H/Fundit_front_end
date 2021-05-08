@@ -1,0 +1,39 @@
+.navbar {
+  font-family: "Ubuntu";
+  position: fixed;
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+
+  /* Animations */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.navbar__transition {
+  background-color: rgb(255, 255, 255);
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.btn__sign {
+  border: 0.5px solid black;
+  /* border-radius: 5px; */
+  margin: 10px 50px 10px 6px;
+  padding: 8px 20px 8px 20px;
+  font-size: 13px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
