@@ -11,7 +11,7 @@ const schema = yup.object().shape({
 });
 
 function Login() {
-  const { register, handleSubmit, errors } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -24,29 +24,26 @@ function Login() {
       <div className="inputs">
         <form onSubmit={handleSubmit(submitForm)}>
           <input
+            {...register("email")}
             type="text"
-            name="email"
             placeholder="Email..."
-            ref={register}
           />
           <p> {errors.email?.message} </p>
 
           <input
+            {...register("password")}
             type="password"
-            name="password"
             placeholder="Password..."
-            ref={register}
           />
           <p> {errors.password?.message} </p>
 
           <input
+            {...register("confirmPassword")}
             type="password"
-            name="confirmPassword"
             placeholder="Confirm Password..."
-            ref={register}
           />
           <p> {errors.confirmPassword && "Passwords Should Match!"} </p>
-          
+
           <input type="submit" id="submit" />
         </form>
       </div>
