@@ -15,7 +15,7 @@
 }
 
 .navbar__transition {
-  background-color: rgb(255, 255, 255);
+  background-color: black;
 }
 
 .header__logo {
@@ -32,8 +32,18 @@
   /* border-radius: 5px; */
   margin: 10px 50px 10px 6px;
   padding: 8px 20px 8px 20px;
-  font-size: 13px;
-  background-color: black;
-  color: white;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Bebas Neue;
+  background-color: #f8f300;
+  color: black;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn__sign:hover {
+  background-color: #2b2b28;
+  color: white;
+  transition: all 0.1s ease-in-out;
 }

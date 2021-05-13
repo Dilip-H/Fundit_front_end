@@ -14,18 +14,18 @@ function Profile() {
               
         
             <div className="buttons">
-                  <Link to="/startup">
+                  <Link to="/signup">
                   <button
-                  className="button__investor"
+                  className="button__startup"
                   type="submit"
                   size="lg"
                   >STARTUP
                   </button>
                   </Link>
-                         
-                  <Link to="/investor">
+          
+                  <Link to="/signup">
                   <button
-                  className="button__startup"
+                  className="button__investor"
                   type="submit"
                   size="lg"
                   >INVESTOR

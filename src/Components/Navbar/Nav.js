@@ -17,7 +17,6 @@ function Nav() {
         return () => {
             window.removeEventListener('scroll', () => {
                 if (window.scrollY < 100) {
-                  // do this
                   handleShow(false);
                 } else handleShow(true);
             });
@@ -27,11 +26,14 @@ function Nav() {
     return (
         <div className={`navbar ${show && "navbar__transition"}`}>
             <header className="header__logo">
+                <Link to="/">
                 <img 
                 src={logo} alt="logo"
                 />
+                </Link>
+              
                 <div className="nav__right">
-                <Link to="/profile">
+                <Link to="/signin">
                 <button className="btn__sign">SIGN IN</button>
                 </Link>    
                 </div>
@@ -41,6 +43,3 @@ function Nav() {
 }
 
 export default Nav
-
-
-//import react-router-dom here and copy files from projectx

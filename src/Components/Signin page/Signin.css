@@ -1,0 +1,83 @@
+.signin {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgimage__signin {
+  background-image: url("../../assets/sign in page.png");
+  background-size: cover;
+  filter: brightness(90%);
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin__container {
+  width: 325px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 10px;
+  border-radius: 5px;
+  background-color: #303030;
+  border: 1px solid lightgray;
+  padding: 20px;
+}
+
+.signin__container > h1 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.signin__container > form > p {
+  font-size: 15px;
+  font-style: italic;
+  color: red;
+}
+
+.signin__container > form > input {
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-color: black;
+  width: 98%;
+  border-radius: 25px;
+}
+
+.login__signInButton {
+  background: #f8f000;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-color: #131211 #1f1e1c #1f1d1a;
+  cursor: pointer;
+  border-radius: 18px;
+  transition: all 0.1s ease-in-out;
+}
+
+.login__signInButton:hover {
+  background-color: #2b2b28;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.signup__part {
+  margin-bottom: 40px;
+}
+
+.signup__part > p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}

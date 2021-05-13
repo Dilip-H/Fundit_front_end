@@ -24,7 +24,11 @@ export default function SimpleAccordion() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{backgroundColor: "#121212"}}>
+      <br></br>
+      <h1 style={{ color: "white", fontSize: "50px", fontFamily: "sans-serif" }}>Frequently Asked Questions</h1>
+
+      <br></br>
       <Accordion style={{ backgroundColor: "#303030" }}>
         <AccordionSummary style={{ color: "white" }}
           expandIcon={<ExpandMoreIcon style={{ color: "white" }} />}
@@ -72,6 +76,8 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <br></br>
+      <br></br>
     </div>
   );
 }
