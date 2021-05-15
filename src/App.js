@@ -9,28 +9,29 @@ import Profile from "./Components/Profile page/Profile";
 import Nav2 from "./Components/Nav2/Nav2";
 
 function App() {
+
   return (
     <Router>
-    <div className="App">
-      <Switch>
-       <Route path="/signin">
-           <Nav2 />
-           <Signin />
+      <div className="App">
+        <Switch>
+          <Route path="/signin">
+            <Nav2 />
+            <Signin />
           </Route>
-       <Route path="/signup">
-           <Nav2 />
-           <Signup />
+          <Route path="/signup">
+            <Nav2 />
+            <Signup />
           </Route>
-        <Route path="/profile">
-          <Navbar/>
-          <Profile />
-        </Route>
-        <Route path="/">
-          <Navbar />
-          <Landing />
-        </Route>
-      </Switch>
-    </div>
+          <Route path="/profile">
+            <Navbar />
+            <Profile />
+          </Route>
+          <Route path="/">
+            <Navbar />
+            <Landing />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
