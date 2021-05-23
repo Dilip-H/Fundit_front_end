@@ -10,7 +10,7 @@ import * as yup from "yup";
 const schema = yup.object().shape({
     startup_avatar: yup.mixed().required("You need to provide a logo"),
     startup_name: yup.string().required("Name of Startup should be required"),
-    startup_Industry: yup.string().required("Name of Sector/industry should be required"),
+    startup_Industry: yup.string().required("Sector/industry should be required"),
     startup_intro: yup.string().required("Explain your idea or about your company in one line please"),
     funding_required: yup.string().required("Please enter the amount of funding required"),
     equity: yup.string().required(),
@@ -125,7 +125,7 @@ function Startup() {
                     {/* Startup_type */}
                     <label style={{color:"white", fontFamily:"Bebas Neue"}}>Startup type</label>
                     <br></br>
-                    <select {...register("startup_type")} style={{ width:"20%", height:"20px", borderRadius:"10px"}}>
+                    <select {...register("startup_type")} style={{ width:"50%", height:"20px", borderRadius:"10px"}}>
                       <option value=""></option>
                       <option value="Idea">Idea</option>
                       <option value="Product">Product</option>
@@ -137,7 +137,7 @@ function Startup() {
                     {/* Startup_interested_type */}
                     <label style={{color:"white", fontFamily:"Bebas Neue"}}>Startup interested type</label>
                     <br></br>
-                    <select {...register("startup_interested_type")} style={{ width:"20%", height:"20px", borderRadius:"10px"}}>
+                    <select {...register("startup_interested_type")} style={{ width:"50%", height:"20px", borderRadius:"10px"}}>
                       <option value=""></option>
                       <option value="Partnership">Partnership</option>
                       <option value="Co-founder">Co-founder</option>

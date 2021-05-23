@@ -7,13 +7,17 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-    invester_avatar: yup.mixed().required(""),
-    investor_name: yup.string().required(""),
-    Investor_intro: yup.string().required(""),
-    investor_industry: yup.string().required(""),
+    invester_avatar:  yup.mixed()
+    .required("You need to upload an image")
+    .test("fileSize", "The file is too large", (value) => {
+      return value && value[0].size <= 2000000;
+    }),
+    investor_name: yup.string().required("Name of Investor should be required"),
+    investor_intro: yup.string().required("This is a required field"),
+    investor_industry: yup.string().required("Sector/industry should be required"),
     investor_type: yup.string().required(),
-    investor_interested_type: yup.string().required(""),
-    amount_ready: yup.mixed().required("")
+    investor_interested_type: yup.string().required(),
+    amount_ready: yup.string().required("Please enter the amount")
 })
 
 function Investor() {
@@ -66,7 +70,7 @@ function Investor() {
                   <label htmlFor="photo" className="form-img__file-label"></label>
                   <img src={src} alt={alt} className="form-img__img-preview" />
                  </div>
-                 <p> {errors.investor_avatar?.message} </p> 
+                 {errors.investor_avatar && <p>{errors.investor_avatar}</p>}
                 <br></br>
 
                 {/* Name of investor */}
@@ -82,11 +86,11 @@ function Investor() {
                   {/* Sector/industry */}
                     <input
                        input 
-                       {...register("investor_Industry")}
+                       {...register("investor_industry")}
                        type="text"
                        placeholder="Sector/industry"
                    />
-                   <p> {errors.investor_Industry?.message} </p>
+                   <p> {errors.investor_industry?.message} </p>
                    <br></br>
 
                    {/* About your idea */}
@@ -110,7 +114,7 @@ function Investor() {
                     {/* Investor_type */}
                     <label style={{color:"white", fontFamily:"Bebas Neue"}}>Investor type</label>
                     <br></br>
-                    <select {...register("investor_type")} style={{ width:"20%", height:"20px", borderRadius:"10px"}}>
+                    <select {...register("investor_type")} style={{ width:"50%", height:"20px", borderRadius:"10px"}}>
                       <option value=""></option>
                       <option value="Professional">Professional</option>
                       <option value="Individual">Individual</option>
@@ -122,7 +126,7 @@ function Investor() {
                     {/* Investor_interested_type */}
                     <label style={{color:"white", fontFamily:"Bebas Neue"}}>Investor interested type</label>
                     <br></br>
-                    <select {...register("investor_interested_type")} style={{ width:"20%", height:"20px", borderRadius:"10px"}}>
+                    <select {...register("investor_interested_type")} style={{ width:"50%", height:"20px", borderRadius:"10px"}}>
                       <option value=""></option>
                       <option value="Idea">Idea</option>
                       <option value="Product">Product</option>
