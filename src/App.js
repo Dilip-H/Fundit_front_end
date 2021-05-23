@@ -7,6 +7,8 @@ import Signup from "./Components/Signup page/Signup";
 import Signin from "./Components/Signin page/Signin";
 import Profile from "./Components/Profile page/Profile";
 import Nav2 from "./Components/Nav2/Nav2";
+import Startup from "./Components/Startup_profile page/Startup";
+import Investor from "./Components/Investor_profile page/Investor";
 
 function App() {
 
@@ -14,6 +16,14 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
+          <Route path="/investor">
+            <Nav2 />
+            <Investor />
+          </Route>
+          <Route path="/startup">
+            <Nav2 />
+            <Startup />
+          </Route>
           <Route path="/signin">
             <Nav2 />
             <Signin />
