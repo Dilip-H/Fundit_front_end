@@ -6,9 +6,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from 'axios';
+import { currentServerUrl } from '../../const';
 
 const schema = yup.object().shape({
-  avatar: yup.mixed()
+  investor_avatar: yup.mixed()
     .required("You need to upload an image")
     .test("fileSize", "The file is too large", (value) => {
       return value && value[0].size <= 2000000;
@@ -48,7 +49,9 @@ function Investor() {
 
   /* for overall form submit button */
   const submitForm = (data) => {
-    axios.post('http://localhost:4000/investor',
+
+    //This is where you send the text-fields of investor to the backend
+    axios.post(`${currentServerUrl}/investor`,
       {
         investor_name: data.investor_name,
         investor_intro: data.investor_intro,
@@ -59,14 +62,17 @@ function Investor() {
       },
       { withCredentials: true })
       .then(res => {
+
+        //This is where you send the avatar to the backend
         console.log(res.data.message)
         const file = new FormData()
-        file.append("avatar", data.avatar[0])
-        axios.post('http://localhost:4000/investor/avatar', file, { withCredentials: true })
+        file.append("investor_avatar", data.investor_avatar[0])
+        axios.post(`${currentServerUrl}/investor/avatar`, file, { withCredentials: true })
           .then(avatarRes => {
             console.log(avatarRes.data.message)
-          }).catch(err => console.log("failed at avatar", err))
-      }).catch(err => console.log("failed at investor", err))
+          }).catch(err => console.log("failed at /investor/avatar", err))
+
+      }).catch(err => console.log("failed at /investor", err))
   };
 
 
@@ -82,7 +88,7 @@ function Investor() {
             <br></br>
             <div className="form__img-input-container">
               <input
-                {...register("avatar")}
+                {...register("investor_avatar")}
                 type="file"
                 accept=".png, .jpg, .jpeg"
                 id="photo"
@@ -93,7 +99,7 @@ function Investor() {
               <label htmlFor="photo" className="form-img__file-label"></label>
               <img src={src} alt={alt} className="form-img__img-preview" />
             </div>
-            {errors.avatar && <p>{errors.avatar}</p>}
+            {errors.investor_avatar && <p>{errors.investor_avatar}</p>}
             <br></br>
 
             {/* Name of investor */}
