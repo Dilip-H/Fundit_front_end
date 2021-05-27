@@ -27,7 +27,7 @@ function Signup() {
   const query = useQuery()
 
   if (!query.get("user_type") && !(query.get("user_type") === 'startup' || query.get("user_type") === 'investor')) {
-    return <Redirect to="/" />
+    return <Redirect to="/profile" />
   }
 
   const submitForm = (data) => {
