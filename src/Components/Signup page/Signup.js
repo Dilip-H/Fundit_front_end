@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Signup.css";
 import { Link, Redirect, useLocation } from "react-router-dom";
-import banner_signup from '../../assets/sign up page.png';
+import banner_signup from '../../assets/banner-signup.svg';
+import signup_image_1 from "../../assets/banner-signup-img-1.svg";
+import signup_image_2 from "../../assets/banner-signup-img-2.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -55,6 +57,9 @@ function Signup() {
   return (
     <div className="signup">
       <div className="bgimage__signup" style={{ backgroundImage: banner_signup }}>
+        <img src={signup_image_1} className="signup_image_1" alt=""/>
+        <img src={signup_image_2} className="signup_image_2" alt=""/>
+
         <div className="signup__container">
           <h1>Sign Up<br></br><h6>Let's get you started</h6></h1>
 
@@ -96,7 +101,7 @@ function Signup() {
 
             <div className="signin__part">
               <p>Already have an account? &nbsp;
-                  <Link to="/signin" style={{ color: "white", textDecoration: "none" }}>
+                  <Link to="/signin" style={{color: "black", textDecoration: "none"}}>
                   <b>Sign-in</b>
                 </Link>
               </p>

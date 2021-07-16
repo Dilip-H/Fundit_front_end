@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Startup.css";
-import banner_profile from "../../assets/banner-2.png";
+import banner_startup from "../../assets/banner-startup.svg";
 import avatar from "../../assets/image_upload.jpg";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -63,8 +63,8 @@ function Startup() {
 
   return (
     <div className="startup">
-      <div className="bgimage__startup" style={{ backgroundImage: banner_profile }}>
-        <div className="profile__container">
+      <div className="bgimage__startup" style={{ backgroundImage: banner_startup }}>
+        <div className="profile-startup__container">
           <h2>Create Your Profile<br></br><h5>Build up your profile.</h5></h2>
 
           {/* Logo upload */}
@@ -80,14 +80,14 @@ function Startup() {
                 className="visually-hidden"
                 onChange={handleImg}
               />
-              <label htmlFor="photo" className="form-img__file-label"></label>
+              <label htmlFor="photo" className="form-img__file-label" ></label>
               <img src={src} alt={alt} className="form-img__img-preview" />
             </div>
             <p> {errors.startup_avatar?.message} </p>
             <br></br>
 
             {/* Name of startup */}
-            <input
+            <input style={{width:"80%"}}
               {...register("startup_name")}
               type="text"
               placeholder="Name of Startup (idea/company)"
@@ -96,8 +96,7 @@ function Startup() {
             <br></br>
 
             {/* Sector/industry */}
-            <input
-              input
+            <input style={{width:"80%"}}
               {...register("startup_Industry")}
               type="text"
               placeholder="Sector/industry"
@@ -106,7 +105,7 @@ function Startup() {
             <br></br>
 
             {/* About your idea */}
-            <input
+            <input style={{width:"80%"}}
               {...register("startup_intro")}
               type="text"
               placeholder="About your idea/company"
@@ -115,7 +114,7 @@ function Startup() {
             <br></br>
 
             {/* Amount of funding */}
-            <input
+            <input style={{width:"80%"}}
               {...register("funding_required")}
               type="number"
               placeholder="Amount of funding you need in ₹"
@@ -124,7 +123,7 @@ function Startup() {
             <br></br>
 
             {/* Equity */}
-            <input
+            <input style={{width:"80%"}}
               {...register("equity")}
               type="number"
               placeholder="Equity in exchange"
@@ -133,9 +132,9 @@ function Startup() {
             <br></br>
 
             {/* Startup_type */}
-            <label style={{ color: "white", fontFamily: "Bebas Neue" }}>Startup type</label>
+            <label style={{ color: "black", fontFamily: "Bebas Neue"}}>Startup type</label>
             <br></br>
-            <select {...register("startup_type")} style={{ width: "50%", height: "20px", borderRadius: "10px" }}>
+            <select {...register("startup_type")} style={{ width: "60%", height: "25px", borderRadius: "15px",  boxShadow: "5px 5px 5px" }}>
               <option value=""></option>
               <option value="Idea">Idea</option>
               <option value="Product">Product</option>
@@ -145,9 +144,9 @@ function Startup() {
             <br></br>
 
             {/* Startup_interested_type */}
-            <label style={{ color: "white", fontFamily: "Bebas Neue" }}>Startup interested type</label>
+            <label style={{ color: "black", fontFamily: "Bebas Neue" }}>Startup interested type</label>
             <br></br>
-            <select {...register("startup_interested_type")} style={{ width: "50%", height: "20px", borderRadius: "10px" }}>
+            <select {...register("startup_interested_type")} style={{ width: "60%", height: "25px", borderRadius: "15px", boxShadow: "5px 5px 5px"  }}>
               <option value=""></option>
               <option value="Partnership">Partnership</option>
               <option value="Co-founder">Co-founder</option>
@@ -158,8 +157,8 @@ function Startup() {
             <br></br>
 
             {/* Pitch deck */}
-            <label style={{ color: "white", marginLeft: "2px", fontFamily: "Bebas Neue" }}>Note: only .pdf and .doc file format supported</label>
-            <input style={{ backgroundColor: "#303030", color: "white", borderRadius: "2px" }}
+            <label style={{ color: "black", marginLeft: "2px", fontFamily: "Bebas Neue" }}>Note: only .pdf and .doc file format supported</label>
+            <input style={{ backgroundColor: "whitesmoke", color: "black", borderRadius: "2px" }}
               {...register("startup_pitchdesk")}
               type="file"
               accept=".doc, .pdf"
@@ -173,7 +172,7 @@ function Startup() {
 
             {/* Submit button */}
             <button
-              className="profile__SubmitButton"
+              className="profile-startup__SubmitButton"
               type="submit"
               id="submit">
               Submit

@@ -1,9 +1,8 @@
 .bgimage__startup {
-  background-image: url("../../assets/banner-2.png");
+  background-image: url("../../assets/banner-startup.svg");
   background-size: cover;
-  filter: brightness(95%);
-
-  height: auto;
+  filter: brightness(90%);
+  height: 180vh;
   width: 100%;
 
   display: flex;
@@ -12,17 +11,17 @@
   justify-content: center;
 }
 
-.profile__container {
-  width: 350px;
+.profile-startup__container {
+  width: 450px;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  box-shadow: 3px 10px 10px;
-  border-radius: 5px;
-  background-color: #303030;
-  border: 1px solid lightgray;
+  box-shadow: 15px 15px 15px;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px solid black;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: -40px;
 }
 
 /* for image uploading starts*/
@@ -30,7 +29,7 @@
 .form__img-input-container {
   position: relative;
   margin: auto;
-  background-color: #303030;
+  background-color: white;
 }
 
 /* this class is used to hide the file input */
@@ -59,6 +58,7 @@ input.visually-hidden:focus-within + label {
   height: 100px;
   border-radius: 50%;
   cursor: pointer;
+  border: black 1px solid;
 }
 
 /* The image element is going to be positioned under the 
@@ -76,31 +76,32 @@ input.visually-hidden:focus-within + label {
 
 /* image uploading stops */
 
-.profile__container > form > h4 {
+.profile-startup__container > form > h4 {
   font-weight: 500;
   margin-left: 15px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: black;
 }
 
-.profile__container > h2 {
+.profile-startup__container > h2 {
   font-weight: 500;
   margin-bottom: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: black;
 }
 
-.profile__container > form > input {
+.profile-startup__container > form > input {
   height: 30px;
   margin-bottom: 10px;
   background-color: white;
   color: #131211;
   border-color: black;
+  box-shadow: 5px 5px 5px;
   width: 98%;
   border-radius: 25px;
 }
 
-.profile__container > form > p {
+.profile-startup__container > form > p {
   font-size: 15px;
   font-style: italic;
   color: red;
@@ -110,7 +111,7 @@ input.visually-hidden:focus-within + label {
   color: black;
 }
 
-.profile__SubmitButton {
+.profile-startup__SubmitButton {
   background: #f8f000;
   width: 50%;
   height: 30px;
@@ -123,11 +124,11 @@ input.visually-hidden:focus-within + label {
   cursor: pointer;
   border-radius: 18px;
   transition: all 0.1s ease-in-out;
-  margin-left: 70px;
+  margin-left: 100px;
   align-items: center;
 }
 
-.profile__SubmitButton:hover {
+.profile-startup__SubmitButton:hover {
   background-color: #2b2b28;
   color: white;
   transition: all 0.1s ease-in-out;

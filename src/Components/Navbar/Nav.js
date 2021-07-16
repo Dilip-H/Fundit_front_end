@@ -7,38 +7,36 @@ function Nav() {
     const [show, handleShow] = useState(false) 
     
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 100) { 
-                handleShow(true);
-            }else{
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) { 
+              handleShow(true);
+          }else{
+              handleShow(false);
+          }
+      });
+      return () => {
+          window.removeEventListener('scroll', () => {
+              if (window.scrollY < 100) {
                 handleShow(false);
-            }
-        });
-        return () => {
-            window.removeEventListener('scroll', () => {
-                if (window.scrollY < 100) {
-                  handleShow(false);
-                } else handleShow(true);
-            });
-          };
-        });
+              } else handleShow(true);
+          });
+        };
+      });
 
     return (
-        <div className={`navbar ${show && "navbar__transition"}`}>
-            <header className="header__logo">
-                <Link to="/">
-                <img 
-                src={logo} alt="logo"
-                />
-                </Link>
-              
-                <div className="nav__right">
-                <Link to="/signin">
-                <button className="btn__sign">SIGN IN</button>
-                </Link>    
+        <div className={`navbar__container ${show && "navbar__transition"}`}>
+                <div className="navbar__content">
+                    <div className="navbar__logo">
+                        <a href="/" ><img src={logo} alt=""/></a>
+                    </div>
+
+                    <div className="navbar__signin">
+                        <Link to="/signin">
+                            <button className="btn__navbar">SIGN IN</button> 
+                        </Link>
+                    </div>
                 </div>
-            </header>
-        </div>
+            </div>
     )
 }
 

@@ -6,7 +6,7 @@
 }
 
 .bgimage__signup {
-  background-image: url("../../assets/sign up page.png");
+  background-image: url("../../assets/banner-signup.svg");
   background-size: cover;
   filter: brightness(90%);
   height: 100vh;
@@ -18,15 +18,33 @@
   justify-content: center;
 }
 
+.signup_image_1 {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  bottom: -125px;
+  left: -150px;
+  top: -30px;
+}
+
+.signup_image_2 {
+  width: 650px;
+  height: 700px;
+  position: absolute;
+  bottom: -125px;
+  right: -150px;
+  top: -30px;
+}
+
 .signup__container {
   width: 325px;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  box-shadow: 3px 10px 10px;
-  border-radius: 5px;
-  background-color: #303030;
-  border: 1px solid lightgray;
+  box-shadow: 15px 15px 15px;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  border: 1px solid black;
   padding: 20px;
 }
 
@@ -34,7 +52,7 @@
   font-weight: 500;
   margin-bottom: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: black;
 }
 
 .signup__container > form > input {
@@ -42,6 +60,7 @@
   margin-bottom: 10px;
   background-color: white;
   border-color: black;
+  box-shadow: 5px 5px 5px;
   width: 98%;
   border-radius: 25px;
 }
@@ -79,5 +98,5 @@
 
 .signin__part > p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: black;
 }

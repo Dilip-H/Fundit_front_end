@@ -1,0 +1,141 @@
+.bgimage__plans {
+  background-image: url("../../assets/banner_plans.png");
+  background-size: cover;
+  filter: brightness(90%);
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plans__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 70px;
+}
+
+.pricing-plan {
+  width: 300px;
+  border-radius: 25px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  margin: 15px;
+}
+
+.plan__highlighted {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.pricing-plan__header {
+  padding: 25px;
+  background-color: whitesmoke;
+  color: black;
+}
+
+.pricing-plan__title,
+.pricing-plan__summary {
+  margin: 0;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.pricing-plan__title {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.pricing-plan__summary {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.pricing-plan__description {
+  padding: 25px;
+  background-color: #2b2b28;
+}
+
+.pricing-plan__list {
+  padding: 0;
+  margin: 0;
+  background-color: #2b2b28;
+}
+
+.pricing-plan__feature {
+  list-style: none;
+  margin: 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 0.9em;
+  background-color: #2b2b28;
+}
+
+.pricing-plan__feature:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.pricing-plan__feature ::before {
+  content: "\2714";
+  color: whitesmoke;
+  position: absolute;
+  left: 0;
+}
+
+.pricing-plan__actions {
+  padding: 25px;
+  border-top: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b28;
+}
+
+.pricing-plan__button {
+  display: inline-block;
+  margin: 15px auto;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: black;
+  background: yellow;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+}
+
+.pricing-plan__button:hover {
+  background-color: #2b2b28;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.pricing-plan__cost {
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+  color: aqua;
+}
+
+.pricing-plan__text {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.pricing-plan__special-text {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  background: whitesmoke;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+}

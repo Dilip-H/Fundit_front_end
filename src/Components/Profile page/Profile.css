@@ -4,7 +4,7 @@
 }
 
 .bgimage__profile {
-  background-image: url("../../assets/banner_profile.png");
+  background-image: url("../../assets/banner-profile.svg");
   background-size: cover;
 
   filter: brightness(90%);
@@ -23,6 +23,24 @@
   justify-content: center;
 }
 
+.profile_image_1 {
+  width: 600px;
+  height: 700px;
+  position: absolute;
+  bottom: -125px;
+  left: -90px;
+  top: 10px;
+}
+
+.profile_image_2 {
+  width: 550px;
+  height: 700px;
+  position: absolute;
+  bottom: -125px;
+  right: -90px;
+  top: -5px;
+}
+
 .buttons {
   display: flex;
   padding: 105px;
@@ -39,7 +57,7 @@
   font-family: Bebas Neue;
   align-items: center;
   cursor: pointer;
-  border-radius: 18px;
+  border-radius: 25px;
   background-color: #f8f300;
   color: black;
   align-items: center;
@@ -64,7 +82,7 @@
   font-family: Bebas Neue;
   align-items: center;
   cursor: pointer;
-  border-radius: 18px;
+  border-radius: 25px;
   background-color: #f8f300;
   color: black;
   align-items: center;

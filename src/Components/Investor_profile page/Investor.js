@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Investor.css";
-import banner_profile from "../../assets/banner-2.png";
+import banner_investor from "../../assets/banner-investor.svg";
 import avatar from "../../assets/user_upload.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -78,13 +78,13 @@ function Investor() {
 
   return (
     <div className="investor">
-      <div className="bgimage__startup" style={{ backgroundImage: banner_profile }}>
-        <div className="profile__container">
+     <div className="bgimage__investor" style={{ backgroundImage: banner_investor }}>
+        <div className="profile-investor__container">
           <h2>Create Your Profile<br></br><h5>Build up your profile.</h5></h2>
-          <h4>Upload your profile picture:</h4>
-
+         
           {/* Profile pic upload */}
           <form onSubmit={handleSubmit(submitForm)}>
+            <h4>Upload your profile picture:</h4>
             <br></br>
             <div className="form__img-input-container">
               <input
@@ -103,8 +103,7 @@ function Investor() {
             <br></br>
 
             {/* Name of investor */}
-            {/*<label style={{color:"white", marginLeft:"20px"}}>Name of Startup (idea/company): </label> */}
-            <input
+            <input style={{width:"80%"}}
               {...register("investor_name")}
               type="text"
               placeholder="Full Name"
@@ -113,8 +112,7 @@ function Investor() {
             <br></br>
 
             {/* Sector/industry */}
-            <input
-              input
+            <input style={{width:"80%"}}
               {...register("investor_industry")}
               type="text"
               placeholder="Sector/industry"
@@ -123,16 +121,16 @@ function Investor() {
             <br></br>
 
             {/* About your idea */}
-            <input
+            <input style={{width:"80%"}}
               {...register("investor_intro")}
               type="text"
-              placeholder="Give us a short intro about yourself"
+              placeholder="What type of startup's your ready to invest"
             />
             <p> {errors.investor_intro?.message} </p>
             <br></br>
 
             {/* Amount ready */}
-            <input
+            <input style={{width:"80%"}}
               {...register("amount_ready")}
               type="number"
               placeholder="Amount your ready to invest in ₹"
@@ -141,9 +139,9 @@ function Investor() {
             <br></br>
 
             {/* Investor_type */}
-            <label style={{ color: "white", fontFamily: "Bebas Neue" }}>Investor type</label>
+            <label style={{ color: "black", fontFamily: "Bebas Neue" }}>Investor type</label>
             <br></br>
-            <select {...register("investor_type")} style={{ width: "50%", height: "20px", borderRadius: "10px" }}>
+            <select {...register("investor_type")} style={{ width: "60%", height: "25px", borderRadius: "15px",  boxShadow: "5px 5px 5px" }}>
               <option value=""></option>
               <option value="professional">Professional</option>
               <option value="individual">Individual</option>
@@ -153,9 +151,9 @@ function Investor() {
             <br></br>
 
             {/* Investor_interested_type */}
-            <label style={{ color: "white", fontFamily: "Bebas Neue" }}>Investor interested type</label>
+            <label style={{ color: "black", fontFamily: "Bebas Neue" }}>Investor interested type</label>
             <br></br>
-            <select {...register("investor_interested_type")} style={{ width: "50%", height: "20px", borderRadius: "10px" }}>
+            <select {...register("investor_interested_type")} style={{ width: "60%", height: "25px", borderRadius: "15px",  boxShadow: "5px 5px 5px" }}>
               <option value=""></option>
               <option value="idea">Idea</option>
               <option value="product">Product</option>
@@ -167,7 +165,7 @@ function Investor() {
 
             {/* Submit button */}
             <button
-              className="profile__SubmitButton"
+              className="profile-investor__SubmitButton"
               type="submit"
               id="submit">
               Submit

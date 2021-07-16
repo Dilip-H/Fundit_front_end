@@ -1,7 +1,9 @@
 import React from "react";
 import "./Signin.css";
 import { Link } from "react-router-dom";
-import banner_signup from '../../assets/sign in page.png';
+import banner_signin from '../../assets/banner-signin.svg';
+import signin_image_1 from "../../assets/banner-signin-img-1.svg"
+import signin_image_2 from "../../assets/banner-signin-img-2.svg"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -33,7 +35,10 @@ function Signup() {
   };
   return (
     <div className="signin">
-      <div className="bgimage__signin" style={{ backgroundImage: banner_signup }}>
+        <div className="bgimage__signin" style={{ backgroundImage: banner_signin }}>
+        <img src={signin_image_1} className="signin_image_1" alt=""/>
+        <img src={signin_image_2} className="signin_image_2" alt=""/>
+
         <div className="signin__container">
           <h1>Welcome back!<br></br><h6>Please Sign-in</h6></h1>
 
@@ -65,7 +70,7 @@ function Signup() {
 
             <div className="signup__part">
               <p>New User? please &nbsp;
-                <Link to="/signup" style={{ color: "white", textDecoration: "none" }}>
+                <Link to="/signup" style={{color: "black", textDecoration: "none"}}>
                   <b>Sign-up</b>
                 </Link>
               </p>
